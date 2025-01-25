@@ -5,10 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload {{ part }} Image</title>
     <style>
-        /* Add your styles here */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8fafc;
+            margin: 0;
+            padding: 20px;
+
+        }
+
+        h1 {
+padding-top: 60px; /* Adjust this value based on your header height */
+            color: #1f2937;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: inline-block;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        input[type="file"] {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #e2e8f0;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 14px;
+ cursor: pointer;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
     </style>
 </head>
 <body>
+    {% include 'header.html' %}
+
     <h1>Upload a {{ part.capitalize() }} Image</h1>
     <form action="/predict" method="post" enctype="multipart/form-data">
         <input type="file" name="image" accept="image/*" required>

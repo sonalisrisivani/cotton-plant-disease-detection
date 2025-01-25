@@ -4,72 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cotton Plant Disease Detection</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-<style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8fafc;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            color: #1f2937;
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+        }
 
-.container {
-    text-align: center;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 500px;
-}
+        h1 {
+padding-top: 60px; /* Adjust this value based on your header height */
+            font-size: 28px;
+            margin-top: 20px;
+        }
 
-h1 {
-    color: #333;
-}
+        p {
+            font-size: 16px;
+            margin: 15px 20px;
+            color: #4b5563;
+            line-height: 1.6;
+        }
 
-p {
-    color: #555;
-    font-size: 1.1em;
-    margin: 15px 0;
-}
+        .get-started-btn {
+            background-color: #3b82f6;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
 
-.get-started-btn {
-    background-color: #007bff;
-    color: white;
-    padding: 12px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+        .get-started-btn:hover {
+            background-color: #2563eb;
+        }
 
-.get-started-btn:hover {
-    background-color: #0056b3;
-}
+        .get-started-btn:focus {
+            outline: none;
+        }
 
+        .tutorial {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            gap: 20px;
+        }
 
-</style>
+        .box {
+            width: 200px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .box h3 {
+            font-size: 18px;
+            color: #1f2937;
+            margin-bottom: 10px;
+        }
+
+        .box p {
+            font-size: 14px;
+            color: #4b5563;
+        }
+
+        .arrow {
+            font-size: 24px;
+            color: #1f2937;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to the Cotton Plant Disease Detection Website</h1>
-        <p>
-            This website helps you detect diseases in cotton plants through image analysis.
-        </p>
-        <p>
-            To get started, click the "Get Started" button below. You will be redirected to the page where you can upload an image of your cotton plant for disease detection.
-        </p>
-        <a href="{{ url_for('select') }}">
-            <button class="get-started-btn">Get Started</button>
-        </a>
+    {% include 'header.html' %}
+
+    <h1>Cotton Plant Disease Detection</h1>
+    <p>
+        Detect diseases in cotton plants through advanced image analysis.
+    </p>
+    <p>
+        Click the button below to upload an image of your cotton plant and begin detection.
+    </p>
+
+    <div class="tutorial">
+        <div class="box">
+            <h3>Step 1</h3>
+            <p>Select the part of the plant that is affected.</p>
+        </div>
+        <div class="arrow">➡️</div>
+        <div class="box">
+            <h3>Step 2</h3>
+            <p>Upload a clear photo of the affected part.</p>
+        </div>
+        <div class="arrow">➡️</div>
+        <div class="box">
+            <h3>Step 3</h3>
+            <p>Get the predicted result and follow the given precautions.</p>
+        </div>
     </div>
 
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    <a href="{{ url_for('select') }}">
+        <button class="get-started-btn">Get Started</button>
+    </a>
+
 </body>
 </html>
