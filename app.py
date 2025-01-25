@@ -14,14 +14,40 @@ bud_model = load_model('models/model_resnet152V2.h5')
 UPLOAD_FOLDER = 'static/uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
+# Class labels for Leaf, Stem, and Bud diseases
+# Class labels for Leaf diseases
+leaf_class_labels = [
+    "Aphids",  # Class 0
+    "Army worm",  # Class 1
+    "Bacterial Blight",  # Class 2
+      # Class 3
+    "Leaf Curl Disease",  # Class 4
+    "Powdery Mildew",  # Class 5
+    "Target Spot",  # Class 6
+    "Fresh Cotton Leaf"
+    # Add other leaf disease names as needed
+]
+
+
+stem_class_labels = [
+     "Southeren Blight" ,"Fresh Stem" ,  "Fusarium Wilt" , "Verticillium Wilt" 
+]
+
+bud_class_labels = [
+    "Cotton Bollworm", "Boll Rot", "Healthy Bud"
+]
+
 # Mapping model prediction to respective part of the plant
 def predict_part(part, image_path):
     if part == 'leaf':
         model = leaf_model
+        class_labels = leaf_class_labels
     elif part == 'stem':
         model = stem_model
+        class_labels = stem_class_labels
     elif part == 'bud':
         model = bud_model
+        class_labels = bud_class_labels
     else:
         return None
 
@@ -30,8 +56,10 @@ def predict_part(part, image_path):
     image_array = image_array.reshape((1, 224, 224, 3))
     prediction = model.predict(image_array)
     predicted_class = prediction.argmax(axis=1)[0]
-
-    return predicted_class
+    
+    # Get the predicted disease name
+    predicted_label = class_labels[predicted_class]
+    return predicted_label
 
 
 @app.route('/')
@@ -63,11 +91,10 @@ def predict():
         file.save(file_path)
 
         # Make prediction using the respective model
-        predicted_class = predict_part(part, file_path)
+        predicted_label = predict_part(part, file_path)
 
-        # Optionally, map the predicted class index to a disease name
-        # For now, we just print the class number (you can modify as per your needs)
-        return render_template('result.html', prediction=f"Class {predicted_class}", image_url=file_path)
+        # Return result page with predicted label and image
+        return render_template('result.html', prediction=predicted_label, image_url=file_path)
 
     return "No file uploaded", 400
 
