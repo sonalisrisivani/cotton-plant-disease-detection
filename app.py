@@ -52,10 +52,11 @@ def predict():
         "Aphids",  # Class 0
         "Army worm",  # Class 1
         "Bacterial Blight",  # Class 2
-        "Fresh Cotton Leaf",  # Class 3
+        #"Fresh Cotton Leaf",  # Class 3
         "Leaf Curl Disease",  # Class 4
         "Powdery Mildew",  # Class 5
         "Target Spot",  # Class 6
+        "Fresh Leaf"
         # Add other disease names as needed
     ]
 
