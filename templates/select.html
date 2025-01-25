@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Plant Part</title>
+    <style>
+        /* Add your styles here */
+    </style>
+</head>
+<body>
+    <h1>Select the Plant Part for Disease Prediction</h1>
+    <form action="/upload" method="get">
+        <label for="part">Choose a part of the plant:</label>
+        <select name="part" id="part" required>
+            <option value="leaf">Leaf</option>
+            <option value="stem">Stem</option>
+            <option value="bud">Bud</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

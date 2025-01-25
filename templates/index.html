@@ -1,94 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Upload</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f7f6;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
+    <title>Cotton Plant Disease Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<style>
 
-        .container {
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 40px;
-            max-width: 600px;
-            width: 100%;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
-        h1 {
-            font-size: 2rem;
-            color: #2c3e50;
-            margin-bottom: 20px;
-        }
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
+}
 
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+h1 {
+    color: #333;
+}
 
-        input[type="file"] {
-            font-size: 1rem;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            width: 80%;
-            cursor: pointer;
-            max-width: 400px;
-        }
+p {
+    color: #555;
+    font-size: 1.1em;
+    margin: 15px 0;
+}
 
-        button[type="submit"] {
-            font-size: 1rem;
-            padding: 10px 20px;
-            background-color: #3498db;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            width: 80%;
-            max-width: 400px;
-        }
+.get-started-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-        button[type="submit"]:hover {
-            background-color: #2980b9;
-        }
+.get-started-btn:hover {
+    background-color: #0056b3;
+}
 
-        .back-link {
-            margin-top: 20px;
-            text-decoration: none;
-            font-size: 1rem;
-            color: #3498db;
-        }
 
-        .back-link:hover {
-            text-decoration: underline;
-        }
-    </style>
+</style>
 </head>
-
 <body>
     <div class="container">
-        <h1>Upload an Image</h1>
-        <form action="/predict" method="post" enctype="multipart/form-data">
-            <input type="file" name="image" accept="image/*" required>
-            <button type="submit">Upload and Predict</button>
-        </form>
-        <a href="/" class="back-link">Go Back</a>
+        <h1>Welcome to the Cotton Plant Disease Detection Website</h1>
+        <p>
+            This website helps you detect diseases in cotton plants through image analysis.
+        </p>
+        <p>
+            To get started, click the "Get Started" button below. You will be redirected to the page where you can upload an image of your cotton plant for disease detection.
+        </p>
+        <a href="{{ url_for('select') }}">
+            <button class="get-started-btn">Get Started</button>
+        </a>
     </div>
-</body>
 
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
 </html>
