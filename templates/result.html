@@ -1,17 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+	    margin: 40px;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            color: #34495e;
+        }
+
+        .prediction {
+            font-size: 1.1rem;
+            color: #27ae60;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .class-name {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        .image-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            background-color: #3498db;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-link:hover {
+            background-color: #2980b9;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Prediction Result</h1>
-    <p>Prediction: {{ prediction }}</p>
-    <p>The predicted class is: <strong>{{ class_name }}</strong></p>
-    <h3>Uploaded Image:</h3>
-    <img src="{{ image_url }}" alt="Uploaded Image" style="max-width: 400px;">
-    <br>
-    <a href="/">Go Back</a>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <p class="prediction">Prediction: <strong>{{ prediction }}</strong></p>
+        <p>The predicted class is: <span class="class-name">{{ class_name }}</span></p>
+
+        <div class="image-container">
+            <h3>Uploaded Image:</h3>
+            <img src="{{ image_url }}" alt="Uploaded Image">
+        </div>
+
+        <a href="/" class="back-link">Go Back</a>
+    </div>
 </body>
+
 </html>
