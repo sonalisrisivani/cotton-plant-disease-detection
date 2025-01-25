@@ -22,32 +22,46 @@ You can install the necessary Python packages using `pip`:
 
 ```bash
 pip install -r requirements.txt
-
+```
 
 ## Setup
 
 1. Clone the repository and navigate to the project directory:
+```bash
 git clone "https://github.com/sonalisrisivani/cotton-plant-disease-detection"
 cd cotton-plant-disease-detection
+```
 
 2. Install Virtual Environment Packages
+```bash
 python -m venv venv 
+```
 
-3. Activate Virtual Environment
-venv\Scripts\activate # For Windows
+3. Activate Virtual Environment # For Windows
+```bash
+venv\Scripts\activate
+```
 
 4. Install dependencies 
+```bash
 pip install -r requirements.txt
+```
 
 5. Run application 
+```bash
 python app.py 
+```
 or
+```bash
 flask run 
+```
 
 Go to - localhost/5000
 
 6. deactivate 
+```bash
 deactivate
+```
 
 
 ## License
