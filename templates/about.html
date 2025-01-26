@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #3498db;
+        }
+        header {
+padding-top: 60px;
+            background: #4CAF50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .team-list {
+            margin-top: 1rem;
+            padding-left: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+  {% include 'header.html' %}
+
+
+    <header>
+        <h1>About Us</h1>
+    </header>
+    <div class="container">
+        <h2>Welcome to Our Website</h2>
+        <p>
+            This website is designed to help identify diseases in different parts of a cotton plant, including leaves, stems, and buds. 
+            Using cutting-edge machine learning models, we aim to provide accurate and efficient predictions to support farmers and agricultural enthusiasts in diagnosing plant health issues.
+        </p>
+        <h2>Our Mission</h2>
+        <p>
+            Our mission is to empower farmers with advanced technology to reduce crop losses and promote sustainable farming practices.
+            By leveraging artificial intelligence, we strive to make disease diagnosis faster, more accessible, and highly reliable.
+        </p>
+        <h2>Our Background</h2>
+        <p>
+            We are final-year B.Tech students who developed this project as part of our academic curriculum. We chose this project 
+            because we believe it can make a difference to farmers, who are the backbone of our country. 
+            Even if it helps them in a tiny way, our efforts will be worthwhile.
+        </p>
+        <h2>Meet the Team</h2>
+        <p>We are:</p>
+        <ul class="team-list">
+            <li>Sonali</li>
+            <li>Abhishek</li>
+            <li>Sharmila</li>
+            <li>Rutwik</li>
+            <li>Pujita</li>
+        </ul>
+        <h2>How It Works</h2>
+        <p>
+            1. Choose the plant part (Leaf, Stem, or Bud).<br>
+            2. Upload an image of the selected part.<br>
+            3. Get instant predictions about the possible disease and take necessary actions!
+        </p>
+        <h2>Contact Us</h2>
+        <p>
+            If you have any questions or suggestions, feel free to reach out to us at <a href="mailto:support@cottonhealth.com">support@cottonhealth.com</a>.
+        </p>
+        <br>
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>
