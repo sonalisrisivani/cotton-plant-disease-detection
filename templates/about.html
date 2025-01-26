@@ -10,11 +10,11 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #3498db;
+            background-color: #f4f4f4;
         }
         header {
-padding-top: 60px;
-            background: #4CAF50;
+            padding-top: 70px;
+            background: #f4f4f4;
             color: white;
             padding: 1rem 0;
             text-align: center;
@@ -37,16 +37,38 @@ padding-top: 60px;
         a:hover {
             text-decoration: underline;
         }
-        .team-list {
-            margin-top: 1rem;
-            padding-left: 1rem;
+        .team-section {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .team-member {
+            width: calc(33% - 1rem);
+            text-align: center;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .team-member img {
+            width: 100%;
+            height: auto;
+            max-width: 150px;
+            border-radius: 50%;
+            margin-bottom: 0.5rem;
+        }
+        .team-member h3 {
+            margin: 0.5rem 0 0;
+            font-size: 1.1rem;
+            color: #333;
         }
     </style>
 </head>
 <body>
 
   {% include 'header.html' %}
-
 
     <header>
         <h1>About Us</h1>
@@ -69,26 +91,40 @@ padding-top: 60px;
             Even if it helps them in a tiny way, our efforts will be worthwhile.
         </p>
         <h2>Meet the Team</h2>
-        <p>We are:</p>
-        <ul class="team-list">
-            <li>Sonali</li>
-            <li>Abhishek</li>
-            <li>Sharmila</li>
-            <li>Rutwik</li>
-            <li>Pujita</li>
-        </ul>
+        <div class="team-section">
+            <div class="team-member">
+                <img src="https://as1.ftcdn.net/jpg/03/16/12/52/1000_F_316125289_3GTL3Yd9JVQz3Nw50uAEEkOpX6GvK0LE.jpg" alt="Sonali">
+                <h3>Sonali</h3>
+            </div>
+            <div class="team-member">
+                <img src="https://as1.ftcdn.net/jpg/03/16/12/52/1000_F_316125289_3GTL3Yd9JVQz3Nw50uAEEkOpX6GvK0LE.jpg" alt="Sharmila">
+                <h3>Sharmila</h3>
+            </div>
+            <div class="team-member">
+                <img src="https://as1.ftcdn.net/jpg/03/16/12/52/1000_F_316125289_3GTL3Yd9JVQz3Nw50uAEEkOpX6GvK0LE.jpg" alt="Abhishek">
+                <h3>Abhishek</h3>
+            </div>
+            <div class="team-member">
+                <img src="https://as1.ftcdn.net/jpg/03/16/12/52/1000_F_316125289_3GTL3Yd9JVQz3Nw50uAEEkOpX6GvK0LE.jpg" alt="Rutwik">
+                <h3>Rutwik</h3>
+            </div>
+            <div class="team-member">
+                <img src="https://as1.ftcdn.net/jpg/03/16/12/52/1000_F_316125289_3GTL3Yd9JVQz3Nw50uAEEkOpX6GvK0LE.jpg" alt="Pujita">
+                <h3>Pujita</h3>
+            </div>
+        </div>
         <h2>How It Works</h2>
         <p>
-            1. Choose the plant part (Leaf, Stem, or Bud).<br>
+            1. Choose the cotton plant part (Leaf, Stem, or Bud).<br>
             2. Upload an image of the selected part.<br>
             3. Get instant predictions about the possible disease and take necessary actions!
         </p>
         <h2>Contact Us</h2>
         <p>
-            If you have any questions or suggestions, feel free to reach out to us at <a href="mailto:support@cottonhealth.com">support@cottonhealth.com</a>.
+            If you have any questions or suggestions, feel free to reach out to us at <a href="mailto:sonalisrisivani@gmail.com">sonalisrisivani@gmail.com</a>.
         </p>
         <br>
-        <a href="/">Back to Home</a>
+        
     </div>
 </body>
 </html>
