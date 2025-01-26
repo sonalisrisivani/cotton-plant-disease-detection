@@ -34,7 +34,7 @@ stem_class_labels = [
 ]
 
 bud_class_labels = [
-    "Cotton Bollworm", "Boll Rot", "Healthy Bud"
+    "Alteraria", "Boll Rot", "Botrytis Blight", "Cotton Pink BollWorm", "Fresh Bud"
 ]
 
 # Mapping model prediction to respective part of the plant
