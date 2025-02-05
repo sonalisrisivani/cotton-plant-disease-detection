@@ -8,7 +8,7 @@ app = Flask(__name__)
 # Load your models for leaf, stem, and bud
 leaf_model = load_model('models/model_resnet152V2.h5')
 stem_model = load_model('models/StemModel.h5')
-bud_model = load_model('models/model_resnet152V2.h5')
+bud_model = load_model('models/BudModel.h5')
 
 # Set up directories for each plant part
 UPLOAD_FOLDER = 'static/uploads'
