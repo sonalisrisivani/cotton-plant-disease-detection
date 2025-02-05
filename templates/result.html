@@ -121,131 +121,123 @@
         // Hardcoded disease information
 
 
-// leaf
-        const diseaseData = {
-            "Aphids": {
-                name: "Aphids",
-                cause: "Caused by bacteria or virus XYZ.",
-                precautions: "Wash hands frequently, avoid crowded places.",
-                recommendations: "Consult a doctor, take prescribed antibiotics."
-            },
-            "Army worm": {
-                name: "Army worm",
-                cause: "Chronic condition related to genetic factors.",
-                precautions: "Maintain a healthy diet and regular exercise.",
-                recommendations: "Regular checkups, avoid stressful activities."
-            },
-            "Bacterial Blight": {
-                name: "Bacterial Blight",
-                cause: "Linked to poor lifestyle choices.",
-                precautions: "Eat nutritious food, avoid smoking and drinking.",
-                recommendations: "Lifestyle modification and periodic screenings."
-            },
-            "Leaf Curl Disease": {
-                name: "Leaf Curl Disease",
-                cause: "Caused by bacteria or virus XYZ.",
-                precautions: "Wash hands frequently, avoid crowded places.",
-                recommendations: "Consult a doctor, take prescribed antibiotics."
-            },
-            "Powdery Mildew": {
-                name: "Powdery Mildew",
-                cause: "Chronic condition related to genetic factors.",
-                precautions: "Maintain a healthy diet and regular exercise.",
-                recommendations: "Regular checkups, avoid stressful activities."
-            },
-            "Target Spot": {
-                name: "Target Spot",
-                cause: "Linked to poor lifestyle choices.",
-                precautions: "Eat nutritious food, avoid smoking and drinking.",
-                recommendations: "Lifestyle modification and periodic screenings."
-            },
-            "Fresh Cotton Leaf": {
-                name: "Fresh Cotton Leaf",
-                cause: "Caused by bacteria or virus XYZ.",
-                precautions: "Wash hands frequently, avoid crowded places.",
-                recommendations: "Consult a doctor, take prescribed antibiotics."
-            },
+
+const diseaseData = {
+// Leaf Diseases
+    "Aphids": {
+        name: "Aphids",
+        cause: "Caused by sap-sucking insects that weaken plants.",
+        precautions: "Use insecticidal soap or neem oil, introduce natural predators like ladybugs.",
+        recommendations: "Regularly inspect plants, remove infected leaves, and apply organic pesticides."
+    },
+    "Army worm": {
+        name: "Army worm",
+        cause: "Caused by caterpillars feeding on plant leaves.",
+        precautions: "Use pheromone traps, maintain field hygiene, and encourage natural predators.",
+        recommendations: "Apply biological pesticides like Bacillus thuringiensis (Bt) or neem-based sprays."
+    },
+    "Bacterial Blight": {
+        name: "Bacterial Blight",
+        cause: "Caused by the bacterium Xanthomonas campestris.",
+        precautions: "Avoid overhead watering, use resistant seed varieties, and remove infected plants.",
+        recommendations: "Apply copper-based fungicides, ensure proper plant spacing for air circulation."
+    },
+    "Leaf Curl Disease": {
+        name: "Leaf Curl Disease",
+        cause: "Caused by Cotton Leaf Curl Virus (CLCV) transmitted by whiteflies.",
+        precautions: "Control whiteflies using insecticides, plant resistant varieties.",
+        recommendations: "Remove and destroy infected plants, avoid planting near infected fields."
+    },
+    "Powdery Mildew": {
+        name: "Powdery Mildew",
+        cause: "Caused by the fungus Erysiphe cichoracearum.",
+        precautions: "Ensure good air circulation, avoid excessive nitrogen fertilizers.",
+        recommendations: "Apply sulfur-based fungicides or neem oil regularly."
+    },
+    "Target Spot": {
+        name: "Target Spot",
+        cause: "Caused by the fungus Corynespora cassiicola.",
+        precautions: "Avoid excessive irrigation, ensure good field drainage.",
+        recommendations: "Use fungicides like chlorothalonil or copper-based sprays."
+    },
+    "Fresh Cotton Leaf": {
+        name: "Fresh Cotton Leaf",
+        cause: "Healthy leaf, no disease detected.",
+        precautions: "Maintain proper plant care and regular monitoring.",
+        recommendations: "Continue good agricultural practices to prevent future infections."
+    },
+
+// Stem Diseases
+    "Southern Blight": {
+        name: "Southern Blight",
+        cause: "Caused by the fungus Sclerotium rolfsii.",
+        precautions: "Avoid excessive moisture, remove plant debris from the soil.",
+        recommendations: "Apply fungicides like PCNB or biofungicides like Trichoderma."
+    },
+    "Fresh Stem": {
+        name: "Fresh Stem",
+        cause: "Healthy stem, no disease detected.",
+        precautions: "Ensure good soil health and proper plant care.",
+        recommendations: "Maintain field hygiene and monitor for early signs of disease."
+    },
+    "Fusarium Wilt": {
+        name: "Fusarium Wilt",
+        cause: "Caused by the fungus Fusarium oxysporum.",
+        precautions: "Use disease-resistant varieties, ensure proper crop rotation.",
+        recommendations: "Apply biofungicides and improve soil health with organic amendments."
+    },
+    "Verticillium Wilt": {
+        name: "Verticillium Wilt",
+        cause: "Caused by the fungus Verticillium dahliae.",
+        precautions: "Avoid planting in infected soil, improve soil drainage.",
+        recommendations: "Use resistant cultivars and apply soil fumigation if necessary."
+    },
+
+// Bud & Boll Diseases
+    "Alteraria": {
+        name: "Alteraria",
+        cause: "Caused by the fungus Alternaria macrospora.",
+        precautions: "Avoid high humidity, improve air circulation around plants.",
+        recommendations: "Use fungicides like Mancozeb and practice crop rotation."
+    },
+    "Boll Rot": {
+        name: "Boll Rot",
+        cause: "Caused by fungal pathogens like Diplodia and Fusarium.",
+        precautions: "Avoid insect damage to bolls, use proper irrigation techniques.",
+        recommendations: "Apply fungicides and remove infected bolls immediately."
+    },
+    "Botrytis Blight": {
+        name: "Botrytis Blight",
+        cause: "Caused by the fungus Botrytis cinerea.",
+        precautions: "Ensure good air circulation, avoid overhead watering.",
+        recommendations: "Apply fungicides and remove affected plant parts."
+    },
+    "Cotton Pink Bollworm": {
+        name: "Cotton Pink Bollworm",
+        cause: "Caused by the pest Pectinophora gossypiella.",
+        precautions: "Use pheromone traps, destroy infested bolls, and practice crop rotation.",
+        recommendations: "Apply Bt cotton or use insecticides to control larvae."
+    },
+    "Fresh Bud": {
+        name: "Fresh Bud",
+        cause: "Healthy bud, no disease detected.",
+        precautions: "Monitor plant growth and protect from insect damage.",
+        recommendations: "Use proper irrigation and fertilizer management."
+    },
+
+// Unknown Disease
+    "Unknown": {
+        name: "Unknown Disease",
+        cause: "No data available.",
+        precautions: "General plant health management is recommended.",
+        recommendations: "Consult an agricultural expert for further diagnosis."
+    }
+};
 
 
 
 
 
-
-//stem
-            "Southeren Blight": {
-                name: "Southeren Blight",
-                cause: "Chronic condition related to genetic factors.",
-                precautions: "Maintain a healthy diet and regular exercise.",
-                recommendations: "Regular checkups, avoid stressful activities."
-            },
-            "Fresh Stem": {
-                name: "Fresh Stem",
-                cause: "Linked to poor lifestyle choices.",
-                precautions: "Eat nutritious food, avoid smoking and drinking.",
-                recommendations: "Lifestyle modification and periodic screenings."
-            },
-            "Fusarium Wilt": {
-                name: "Fusarium Wilt",
-                cause: "Caused by bacteria or virus XYZ.",
-                precautions: "Wash hands frequently, avoid crowded places.",
-                recommendations: "Consult a doctor, take prescribed antibiotics."
-            },
-            "Verticillium Wilt": {
-                name: "Verticillium Wilt",
-                cause: "Chronic condition related to genetic factors.",
-                precautions: "Maintain a healthy diet and regular exercise.",
-                recommendations: "Regular checkups, avoid stressful activities."
-            },
-
-
-
-
-
-
-//bud
-            "Alteraria": {
-                name: "Alteraria",
-                cause: "Linked to poor lifestyle choices.",
-                precautions: "Eat nutritious food, avoid smoking and drinking.",
-                recommendations: "Lifestyle modification and periodic screenings."
-            },
-            "Boll Rot": {
-                name: "Boll Rot",
-                cause: "Linked to poor lifestyle choices.",
-                precautions: "Eat nutritious food, avoid smoking and drinking.",
-                recommendations: "Lifestyle modification and periodic screenings."
-            },
-            "Botrytis Blight": {
-                name: "Botrytis Blight",
-                cause: "Linked to poor lifestyle choices.",
-                precautions: "Eat nutritious food, avoid smoking and drinking.",
-                recommendations: "Lifestyle modification and periodic screenings."
-            },
-            "Cotton Pink BollWorm": {
-                name: "Cotton Pink BollWorm",
-                cause: "Linked to poor lifestyle choices.",
-                precautions: "Eat nutritious food, avoid smoking and drinking.",
-                recommendations: "Lifestyle modification and periodic screenings."
-            },
-            "Fresh Bud": {
-                name: "Fresh Bud",
-                cause: "Linked to poor lifestyle choices.",
-                precautions: "Eat nutritious food, avoid smoking and drinking.",
-                recommendations: "Lifestyle modification and periodic screenings."
-            },
-
-
-
-
-
-//otherwise
-            "Unknown": {
-                name: "Unknown Disease",
-                cause: "No data available.",
-                precautions: "General health precautions are recommended.",
-                recommendations: "Please consult a healthcare professional."
-            }
-        };
 
         // Get the predicted class name
         const prediction = document.getElementById("prediction").innerText.trim();
