@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload {{ part }} Image</title>
+    <title>Upload {{ part }} Image for {{ plant.capitalize() }}</title> <!-- Modified title -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -61,11 +61,15 @@ padding-top: 60px; /* Adjust this value based on your header height */
 <body>
     {% include 'header.html' %}
 
-    <h1>Upload a {{ part.capitalize() }} Image</h1>
+
+<h1>Upload a {{ part.capitalize() }} Image for {{ plant.capitalize() }}</h1>
+
     <form action="/predict" method="post" enctype="multipart/form-data">
         <input type="file" name="image" accept="image/*" required>
         <input type="hidden" name="part" value="{{ part }}">
+        <input type="hidden" name="plant" value="{{ plant }}"> <!-- Added hidden plant field -->
         <button type="submit">Upload and Predict</button>
     </form>
+
 </body>
 </html>
