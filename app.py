@@ -10,7 +10,7 @@ cotton_leaf_model = load_model('models/model_resnet152V2.h5')
 cotton_stem_model = load_model('models/StemModel.h5')
 cotton_bud_model = load_model('models/BudModel.h5')
 brinjal_model = load_model('models/BudModel.h5')  # Assuming similar model for brinjal
-tomato_model = load_model('models/BudModel.h5')   # Assuming similar model for tomato
+tomato_model = load_model('models/TomatoModel.h5')  
 
 # Set up directories for each plant part
 UPLOAD_FOLDER = 'static/uploads'
@@ -34,8 +34,8 @@ brinjal_class_labels = [
     "Bacterial Wilt", "Fruit Rot", "Mite Infestation", "Healthy Brinjal"
 ]
 
-tomato_class_labels = [
-    "Early Blight", "Late Blight", "Septoria Leaf Spot", "Healthy Tomato"
+tomato_class_labels =  [
+'Tomato_Early_blight', 'Tomato_Late_blight', 'Tomato_Yellow_Leaf_Curl_Virus', 'Tomato_mosaic_virus', 'Tomato_Septoria_leaf_spot', 'Tomato_Leaf_Mold', 'Tomato_healthy', 'Tomato_Target_Spot', 'Tomato_Bacterial_spot', 'Tomato_Spider_mites Two-spotted_spider_mite'
 ]
 
 # Mapping model prediction to respective part of the plant
